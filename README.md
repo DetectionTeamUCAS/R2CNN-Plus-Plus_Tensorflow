@@ -1,4 +1,4 @@
-# R2CNN-Plus-Plus_Tensorflow (Not available now.)
+# R2CNN-Plus-Plus_Tensorflow
 
 ## Abstract
 This is a tensorflow implementation of [R<sup>2</sup>CNN++: Multi-Dimensional Attention Based Rotation Invariant Detector with Robust Anchor Strategy](https://arxiv.org/abs/1811.07126).        
@@ -83,11 +83,11 @@ python setup.py build_ext --inplace
 ### DOTA     
 
 ```   
-python demo_rh.py --src_folder='/PATH/TO/DOTA/IMAGES_ORIGINAL/' 
-                  --image_ext='.png' 
-                  --des_folder='/PATH/TO/SAVE/RESULTS/' 
-                  --save_res=False
-                  --gpu='0'
+python demo_rh.py (demo_rh_pyramid.py) --src_folder='/PATH/TO/DOTA/IMAGES_ORIGINAL/' 
+                                       --image_ext='.png' 
+                                       --des_folder='/PATH/TO/SAVE/RESULTS/' 
+                                       --save_res=False
+                                       --gpu='0'
 ```
 
 
@@ -110,7 +110,7 @@ python inference.py --data_dir='/PATH/TO/DOTA/IMAGES_CROP/'
 ```     
 (1) Modify parameters (such as CLASS_NUM, DATASET_NAME, VERSION, etc.) in $PATH_ROOT/libs/configs/cfgs.py
 (2) Add category information in $PATH_ROOT/libs/label_name_dict/lable_dict.py     
-(3) Add data_name to line 77 of $PATH_ROOT/data/io/read_tfrecord.py 
+(3) Add data_name to $PATH_ROOT/data/io/read_tfrecord.py 
 ```     
 
 2、make tfrecord
@@ -139,23 +139,30 @@ tensorboard --logdir=.
 ## Citation
 Some relevant achievements based on this code.     
 
-    @article{[yang2018position](https://ieeexplore.ieee.org/document/8464244),
-		title={Position Detection and Direction Prediction for Arbitrary-Oriented Ships via Multitask Rotation Region Convolutional Neural Network},
-		author={Yang, Xue and Sun, Hao and Sun, Xian and  Yan, Menglong and Guo, Zhi and Fu, Kun},
-		journal={IEEE Access},
-		volume={6},
-		pages={50839-50849},
-		year={2018},
-		publisher={IEEE}
+    @inproceedings{yang2019scrdet,
+            title={SCRDet: Towards More Robust Detection for Small, Cluttered and Rotated Objects},
+            author={Yang, Xue and Yang, Jirui and Yan, Junchi and Zhang, Yue and Zhan, Tengfei and Guo, Zhi and Xian, Sun and Fu, Kun},
+            booktitle={Proc. ICCV},
+            year={2019}
 	}
     
-    @article{[yang2018r-dfpn](http://www.mdpi.com/2072-4292/10/1/132),
-		title={Automatic ship detection in remote sensing images from google earth of complex scenes based on multiscale rotation dense feature pyramid networks},
-		author={Yang, Xue and Sun, Hao and Fu, Kun and Yang, Jirui and Sun, Xian and Yan, Menglong and Guo, Zhi},
-		journal={Remote Sensing},
-		volume={10},
-		number={1},
-		pages={132},
-		year={2018},
-		publisher={Multidisciplinary Digital Publishing Institute}
+    @article{yang2018position,
+            title={Position Detection and Direction Prediction for Arbitrary-Oriented Ships via Multitask Rotation Region Convolutional Neural Network},
+            author={Yang, Xue and Sun, Hao and Sun, Xian and  Yan, Menglong and Guo, Zhi and Fu, Kun},
+            journal={IEEE Access},
+            volume={6},
+            pages={50839-50849},
+            year={2018},
+            publisher={IEEE}
+	}
+    
+    @article{yang2018r-dfpn,
+            title={Automatic ship detection in remote sensing images from google earth of complex scenes based on multiscale rotation dense feature pyramid networks},
+            author={Yang, Xue and Sun, Hao and Fu, Kun and Yang, Jirui and Sun, Xian and Yan, Menglong and Guo, Zhi},
+            journal={Remote Sensing},
+            volume={10},
+            number={1},
+            pages={132},
+            year={2018},
+            publisher={Multidisciplinary Digital Publishing Institute}
 	} 
