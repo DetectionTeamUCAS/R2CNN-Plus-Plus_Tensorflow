@@ -9,7 +9,7 @@ from libs.configs import cfgs
 from tensorflow.contrib.slim.nets import resnet_v1
 from tensorflow.contrib.slim.nets import resnet_utils
 from tensorflow.contrib.slim.python.slim.nets.resnet_v1 import resnet_v1_block
-from libs.networks.layer import squeeze_excitation_layer, build_attention, build_inception, build_inception_attention
+from libs.networks.attention import squeeze_excitation_layer, build_attention, build_inception, build_inception_attention
 from help_utils.tools import add_heatmap
 
 
@@ -185,34 +185,3 @@ def restnet_head(input, is_training, scope_name):
 
     # global average pooling C5 to obtain fc layers
     return C5_flatten
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
