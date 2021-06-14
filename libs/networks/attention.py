@@ -4,6 +4,7 @@ from __future__ import absolute_import, division, print_function
 
 import tensorflow as tf
 import tensorflow.contrib.slim as slim
+from libs.configs import cfgs
 
 
 def build_attention(inputs, is_training):
